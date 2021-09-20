@@ -1,5 +1,5 @@
 # To-Do-List-React
-> This is a simple To-Do list app that allows users to add new tasks, mark completed tasks, edit existing tasks, remove tasks and clear all completed tasks.
+> This is a To-Do list app that allows users to add new tasks, mark completed tasks, edit existing tasks and delete tasks. It was built following the tutorial: React Tutorial From Scratch: A Step-by-Step Guide (2021).
 
 
 ## Built With
