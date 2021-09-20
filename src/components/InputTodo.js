@@ -1,4 +1,5 @@
-/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 
 class InputTodo extends Component {
@@ -16,10 +17,22 @@ class InputTodo extends Component {
     });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if (this.state.title.trim()) {
+      this.props.addTodoProps(this.state.title);
+      this.setState({
+        title: '',
+      });
+    } else {
+      alert('Please write item');
+    }
+  }
+
   render() {
     const { title } = this.state;
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
           type="text"
           placeholder="Add todo..."
